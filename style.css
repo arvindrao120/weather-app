@@ -1,106 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(95deg, #1e4b30, #0a6780);
+}
+.card {
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lavender;
+  max-width: 450px;
+}
+.weather {
+  height: 620px;
+}
+
+.search {
+  margin: 25px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.search .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgb(223, 222, 222);
+  background-color: rgb(236, 236, 236);
+  cursor: pointer;
+}
+.search input {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  padding: 0px 45px;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  width: 300px;
+  height: 50px;
+}
+.search .circle:hover {
+  background-color: black;
+  color: white;
+  transition: all ease-in 0.3s;
+}
+
+.headings {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  font-size: 1.5rem;
+  /* margin-top: -45px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom {
+  gap: 10px;
+  padding: 0px 45px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bottomLeft {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+.bottomLeft img {
+  height: 50px;
+}
+.bottomRight {
+  gap: 20px;
+  align-items: center;
+  display: flex;
+}
+.bottomRight i {
+  font-size: 2.5rem;
+}
+.bottomHeading h3 {
+  font-size: 1.5rem;
+}
+.bottomHeading h4 {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 471px) {
+  .card {
     width: 100%;
+    border-radius: 0px;
+  }
+  .weather {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(95deg, #1e4b30,#0a6780);
-}
-.card{
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lavender;
-    width: 90vw;
-    max-width: 450px;
-}
-.weather{
+  }
+  .search {
+    flex-direction: column;
+  }
 
-    height: 80vh;
-}
+  .search input {
+    border-radius: 0;
+    width: 100vw;
+  }
+  .search .circle {
+    align-self: center;
+    margin-top: 10px;
+    width: 30%;
+    border-radius: 0;
+  }
 
-.search{
-    width: 35vw;
-    margin: 25px 0px ;
-   display: flex;
+  .bottomLeft {
     justify-content: center;
-}
-.search .circle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid rgb(223, 222, 222);
-    background-color: rgb(236, 236, 236);
-    cursor: pointer;
-}
-.search input{
-    border: none;
-    outline: none;
-    padding: 0px 45px;
-    border-radius: 30px;
-    font-size: 1.4rem;
-    width: 20vw;
-    height: 50px;
-}
-.search .circle:hover{
-    background-color: black;
-    color:white ;
-    transition: all ease-in .3s;
-}
-
-.headings{
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    align-items: center;
-}
-.heading{
-    font-size: 1.5rem;
-    /* margin-top: -45px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  }
+  .bottomRight {
+    margin-top: 30px;
+    justify-content: center;
+    width: 100%;
+  }
 
-.bottom{
-    gap: 10px;
-    padding: 0px 45px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-evenly;
-}
-.bottomLeft{
-    align-items: center;
-    display: flex;
-    gap: 20px;
-}
-.bottomLeft img{
-    height: 50px;
-}
-.bottomRight{
-    gap: 20px;
-    align-items: center;
-    display: flex;
-}
-.bottomRight i{
-    font-size: 2.5rem;
-}
-.bottomHeading h3{
-    font-size:1.5rem;
-    
-}
-.bottomHeading h4{
-    font-size:1rem;
-
+  .bottom {
+    display: block;
+  }
 }
